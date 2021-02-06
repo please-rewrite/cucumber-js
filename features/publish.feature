@@ -1,3 +1,4 @@
+@uses-publish
 Feature: Publish reports
 
   Background:

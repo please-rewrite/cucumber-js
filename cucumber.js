@@ -1,6 +1,9 @@
 const feature = [
   '--require-module ts-node/register',
   '--require features/**/*.ts',
+  // TODO remove retry when https://github.com/cucumber/cucumber-js/issues/1457 is fixed
+  '--retry 2',
+  '--retry-tag-filter @uses-publish',
   `--format ${
     process.env.CI || !process.stdout.isTTY ? 'progress' : 'progress-bar'
   }`,
